@@ -79,7 +79,7 @@ Diese Demo zeigt, wie das im Netz und im **Höhenschema** aussieht, was **Gap** 
 )
 st.caption(
     "Anders als die Fall-Demos im Portfolio, die an einem Anwendungsfall mehrere Verfahren vergleichen, zeigt diese Demo - drittes Stück der Netzwerkfluss-Linie der \"Konzepte\"-Reihe, Kontrast zu den Demos \"Edmonds-Karp\" und \"Dinic\" - **ein** Verfahren an einem wachsenden Beispiel. "
-    "Dieselben Höhen und Überschüsse stecken im nächsten Stück: **Cost Scaling** ist Push-Relabel mit ε-optimalen Kosten (Konvergenz mit der ε-Skalierung der Auktion aus der Matching-Linie) - noch nicht gebaut. Die Kosten selbst entscheiden hier noch nicht (**Successive Shortest Paths**)."
+    "Dieselben Höhen und Überschüsse stecken im nächsten Stück: **Cost Scaling** ist Push-Relabel mit ε-optimalen Kosten (Konvergenz mit der ε-Skalierung der Auktion aus der Matching-Linie) - noch nicht gebaut. Die Kosten selbst entscheiden hier noch nicht (**Successive Shortest Paths**, gebaut)."
 )
 
 with st.expander("So funktioniert Push-Relabel", expanded=True):
@@ -405,7 +405,7 @@ st.markdown(
 | **Ein Gut, teilbar** | Alle Waren sind gleich und beliebig teilbar. Mehrere Güter auf gemeinsamen Kanten machen den Fluss im Allgemeinen gebrochen. | **Mehrgüterfluss** (später in dieser Linie) |
 """
 )
-st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel (dieses Stück), Successive Shortest Paths, Cycle-Canceling, Cost Scaling, Mehrgüterfluss, Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten drei gebaut.")
+st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel (dieses Stück), Successive Shortest Paths (gebaut), Cycle-Canceling, Cost Scaling, Mehrgüterfluss, Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten vier gebaut.")
 
 st.markdown("---")
 
