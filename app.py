@@ -405,7 +405,7 @@ st.markdown(
 | **Ein Gut, teilbar** | Alle Waren sind gleich und beliebig teilbar. Mehrere Güter auf gemeinsamen Kanten machen den Fluss im Allgemeinen gebrochen. | **Mehrgüterfluss** (später in dieser Linie) |
 """
 )
-st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel (dieses Stück), Successive Shortest Paths (gebaut), Cycle-Canceling, Cost Scaling, Mehrgüterfluss, Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten vier gebaut.")
+st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel (dieses Stück), Successive Shortest Paths (gebaut), Cycle-Canceling (gebaut), Cost Scaling, Mehrgüterfluss, Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten fünf gebaut.")
 
 st.markdown("---")
 
