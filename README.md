@@ -8,14 +8,14 @@ Edmonds-Karp und Dinic bauen den Fluss aus **Wegen**. Push-Relabel kommt ohne ei
 Alles ist lokal. Am Ende von **Phase 1** liegt in T der maximale Fluss, die Knoten, die T nicht mehr erreichen, sind der **minimale Schnitt**; in **Phase 2** fließt der restliche Überschuss zurück nach S. Vehikel wie in den Vorgänger-Demos: ein Distributionsnetz (Werke → Verteilzentren → Filialen), dazu Einheitsnetze.
 
 **Einordnung in die Reihe (die Kanten des Graphen):** Kontrast, kein Fix: Push-Relabel löst dasselbe Problem wie Edmonds-Karp und Dinic mit einer anderen Bauweise (lokal statt über Wege). Es ist unabhängig von der Weglänge, pflegt dafür Höhen, und seine Praxis hängt an zwei Heuristiken (Gap, Global Relabeling).
-Das nächste Stück, **Cost Scaling**, ist Push-Relabel mit ε-optimalen Kosten (Konvergenz mit der ε-Skalierung der Auktion aus der Matching-Linie); **Successive Shortest Paths** (gebaut: [ssp-demo](https://github.com/sebastian-hanisch/ssp-demo)) setzt an der Kostenblindheit an. Bisher gebaut: die ersten fünf Stücke.
+Das Stück danach, **Cost Scaling** (gebaut: [cost-scaling-demo](https://github.com/sebastian-hanisch/cost-scaling-demo)), ist Push-Relabel mit ε-optimalen Kosten (Konvergenz mit der ε-Skalierung der Auktion aus der Matching-Linie); **Successive Shortest Paths** (gebaut: [ssp-demo](https://github.com/sebastian-hanisch/ssp-demo)) setzt an der Kostenblindheit an. Bisher gebaut: die ersten sechs Stücke.
 ```
 edmonds-karp-demo (Wurzel: Restgraph, Rückkanten, Max-Flow = Min-Cut)                  [gebaut]
   ├─ dinic-demo (viele kürzeste Wege je Phase: Niveaugraph, blockierender Fluss)        [gebaut]
   ├─ push-relabel-demo (kein Weg: Überschüsse schieben, Höhen anheben)                 [dieses Stück]
   └─ ssp-demo (Kosten: der billigste Weg im Restgraphen, Potenziale)                    [gebaut]
        ├─ cycle-canceling-demo → Netzwerksimplex (network-flow-demo)                    [gebaut / gebaut als Fall-Demo]
-       ├─ cost-scaling-demo (Push-Relabel + ε-Skalierung, das nutzt OR-Tools)           [geplant]
+       ├─ cost-scaling-demo (Push-Relabel + ε-Skalierung, das nutzt OR-Tools)           [gebaut]
        └─ multicommodity-demo → Column Generation, Garg-Könemann,
           Fixkosten-Netzwerkdesign → Benders-Zerlegung, Slope Scaling                   [geplant]
 ```

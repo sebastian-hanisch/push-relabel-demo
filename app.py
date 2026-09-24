@@ -79,7 +79,7 @@ Diese Demo zeigt, wie das im Netz und im **Höhenschema** aussieht, was **Gap** 
 )
 st.caption(
     "Anders als die Fall-Demos im Portfolio, die an einem Anwendungsfall mehrere Verfahren vergleichen, zeigt diese Demo - drittes Stück der Netzwerkfluss-Linie der \"Konzepte\"-Reihe, Kontrast zu den Demos \"Edmonds-Karp\" und \"Dinic\" - **ein** Verfahren an einem wachsenden Beispiel. "
-    "Dieselben Höhen und Überschüsse stecken im nächsten Stück: **Cost Scaling** ist Push-Relabel mit ε-optimalen Kosten (Konvergenz mit der ε-Skalierung der Auktion aus der Matching-Linie) - noch nicht gebaut. Die Kosten selbst entscheiden hier noch nicht (**Successive Shortest Paths**, gebaut)."
+    "Dieselben Höhen und Überschüsse stecken in **Cost Scaling** (Push-Relabel mit ε-optimalen Kosten, Konvergenz mit der ε-Skalierung der Auktion aus der Matching-Linie): gebaut. Die Kosten selbst entscheiden hier noch nicht (**Successive Shortest Paths**, gebaut)."
 )
 
 with st.expander("So funktioniert Push-Relabel", expanded=True):
@@ -405,7 +405,7 @@ st.markdown(
 | **Ein Gut, teilbar** | Alle Waren sind gleich und beliebig teilbar. Mehrere Güter auf gemeinsamen Kanten machen den Fluss im Allgemeinen gebrochen. | **Mehrgüterfluss** (später in dieser Linie) |
 """
 )
-st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel (dieses Stück), Successive Shortest Paths (gebaut), Cycle-Canceling (gebaut), Cost Scaling, Mehrgüterfluss, Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten fünf gebaut.")
+st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel (dieses Stück), Successive Shortest Paths (gebaut), Cycle-Canceling (gebaut), Cost Scaling (gebaut), Mehrgüterfluss, Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten sechs gebaut.")
 
 st.markdown("---")
 
@@ -428,7 +428,7 @@ with st.expander("📐 Mathematische Formulierung"):
 
 **Gap.** Gibt es nach einem relabel keinen Knoten mehr auf Höhe $k<n$, kann kein Knoten $v$ mit $k<h(v)<n$ den Knoten $t$ erreichen (jede Restkante senkt $h$ höchstens um 1): sie werden auf $n+1$ gesetzt. **Global Relabeling** setzt $h(v)$ auf die exakte Entfernung zu $t$ in $G_f$ (Phase 2: $n$ + Entfernung zu $s$); die Höhen sinken dabei nie.
 
-**Kosten.** Push-Relabel kennt keine Kosten; mit Kosten und $\varepsilon$-optimalen Preisen wird daraus **Cost Scaling** (nächstes Stück der Linie).
+**Kosten.** Push-Relabel kennt keine Kosten; mit Kosten und $\varepsilon$-optimalen Preisen wird daraus **Cost Scaling** (Stück 6 der Linie, gebaut).
 
 Implementiert in `pr_scenario.py` (Netze, eigener Zufallsgenerator), `pr_algorithm.py` (Preflow, push, relabel, Zeigerliste, Gap, Global Relabeling, beide Phasen, Schnitt), `pr_dinic.py` und `pr_edmonds_karp.py` (Kopien der Vorgänger-Demos als Vergleichsbasis), `pr_evaluation.py` (Kennzahlen, Verteilungen, Experimente).
         """
