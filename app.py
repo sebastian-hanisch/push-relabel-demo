@@ -402,10 +402,10 @@ st.markdown(
 | **Das Verfahren ist schneller als Wege** | Auf den kleinen, geschichteten Netzen dieser Demo durchsucht es mit beiden Heuristiken im Mittel etwa ein Viertel mehr Kanten als Dinic und ist nur in jedem fünften Netz gleich gut. Der Vorteil aus der Literatur zeigt sich erst bei großen, dichten Netzen und in Implementierungen mit Feinschliff. | Die Treppe zeigt, wo es gewinnt: viele Phasen bei Dinic, keine Wege bei Push-Relabel |
 | **Die Heuristiken sind Teil des Verfahrens** | Ohne Gap und Global Relabeling ist Push-Relabel auf diesen Netzen teurer als Edmonds-Karp. Ihre Wirkung ist Erfahrung, keine Worst-Case-Garantie: die Schranke $O(n^2 m)$ bleibt. | Nächstes Stück der Linie |
 | **Sequentielle Rechnung** | Push-Relabel ist lokal und deshalb parallelisierbar - das lässt sich hier nicht messen, gezählt wird nacheinander. | Nicht Thema dieser Linie |
-| **Ein Gut, teilbar** | Alle Waren sind gleich und beliebig teilbar. Mehrere Güter auf gemeinsamen Kanten machen den Fluss im Allgemeinen gebrochen. | **Mehrgüterfluss** (später in dieser Linie) |
+| **Ein Gut, teilbar** | Alle Waren sind gleich und beliebig teilbar. Mehrere Güter auf gemeinsamen Kanten machen den Fluss im Allgemeinen gebrochen. | **Mehrgüterfluss** (gebaut: multicommodity-demo) |
 """
 )
-st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel (dieses Stück), Successive Shortest Paths (gebaut), Cycle-Canceling (gebaut), Cost Scaling (gebaut), Mehrgüterfluss, Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten sechs gebaut.")
+st.caption("Die Netzwerkfluss-Linie ist als Ganzes geplant: Edmonds-Karp, Dinic, Push-Relabel (dieses Stück), Successive Shortest Paths (gebaut), Cycle-Canceling (gebaut), Cost Scaling (gebaut), Mehrgüterfluss (gebaut), Column Generation, Garg-Könemann, Fixkosten-Netzwerkdesign, Benders-Zerlegung und Slope Scaling - bisher sind die ersten sieben gebaut.")
 
 st.markdown("---")
 
