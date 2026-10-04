@@ -1,6 +1,6 @@
 # Push-Relabel – Fluss ohne Wege – Streamlit-Demo
 
-*(noch nicht deployed)*
+**[→ Demo live ausprobieren](https://sebastianhanisch-push-relabel-demo.streamlit.app/)**
 
 Drittes Stück der **Netzwerkfluss-Linie** der "Konzepte"-Reihe für die Website "Sebastian Hanisch – Operations Research und Machine Learning", Kontrast zu [Edmonds-Karp](https://github.com/sebastian-hanisch/edmonds-karp-demo) und [Dinic](https://github.com/sebastian-hanisch/dinic-demo):
 anders als die Fall-Demos im Portfolio (ein Anwendungsfall, mehrere Verfahren im Vergleich) zeigt diese Demo **ein** Verfahren – **Push-Relabel** (Goldberg und Tarjan, 1988) – an einem wachsenden Beispiel.

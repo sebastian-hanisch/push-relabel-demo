@@ -408,7 +408,7 @@ st.markdown(
 |---|---|---|
 | **Nur die Menge zählt** | Push-Relabel schiebt Überschuss dorthin, wo Höhe und Rest es erlauben, ohne Preise zu kennen: welche Lanes der Fluss benutzt, entscheidet die Reihenfolge, nicht das Geld. | **Successive Shortest Paths**: der billigste Weg entscheidet; **Cost Scaling**: Push-Relabel mit ε-optimalen Kosten |
 | **Das Verfahren ist schneller als Wege** | Auf den kleinen, geschichteten Netzen dieser Demo durchsucht es mit beiden Heuristiken im Mittel etwa ein Viertel mehr Kanten als Dinic und ist nur in jedem fünften Netz gleich gut. Der Vorteil aus der Literatur zeigt sich erst bei großen, dichten Netzen und in Implementierungen mit Feinschliff. | Die Treppe zeigt, wo es gewinnt: viele Phasen bei Dinic, keine Wege bei Push-Relabel |
-| **Die Heuristiken sind Teil des Verfahrens** | Ohne Gap und Global Relabeling ist Push-Relabel auf diesen Netzen teurer als Edmonds-Karp. Ihre Wirkung ist Erfahrung, keine Worst-Case-Garantie: die Schranke $O(n^2 m)$ bleibt. | Nächstes Stück der Linie |
+| **Die Heuristiken sind Teil des Verfahrens** | Ohne Gap und Global Relabeling ist Push-Relabel auf diesen Netzen teurer als Edmonds-Karp. Ihre Wirkung ist Erfahrung, keine Worst-Case-Garantie: die Schranke $O(n^2 m)$ bleibt. | Dieses Stück: Gap und Global Relabeling sind schaltbar und gemessen; ein eigenes Stück der Linie gibt es dafür nicht |
 | **Sequentielle Rechnung** | Push-Relabel ist lokal und deshalb parallelisierbar - das lässt sich hier nicht messen, gezählt wird nacheinander. | Nicht Thema dieser Linie |
 | **Ein Gut, teilbar** | Alle Waren sind gleich und beliebig teilbar. Mehrere Güter auf gemeinsamen Kanten machen den Fluss im Allgemeinen gebrochen. | **Mehrgüterfluss** (gebaut: multicommodity-demo) |
 """
