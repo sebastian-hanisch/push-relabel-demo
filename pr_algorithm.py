@@ -121,14 +121,14 @@ def push_relabel(net, selection="fifo", gap=True, global_relabel=True, keep_trac
                 if w not in dist and res[e ^ 1] > 0:        # w -> v hat Rest: w erreicht das Ziel über v
                     dist[w] = dist[v] + 1
                     queue.append(w)
+        dead_end = n + max((dist[v] for v in dist if v != s and s_side[v]), default=1) - 1 if phase[0] == 2 else n       # Knoten ohne Weg zu S: so hoch wie nötig, damit die Markierung für Kanten dorthin gültig bleibt
         for v in range(n):
             if v == s or v == t:
                 continue
-            if v in dist:
-                if phase[0] == 1 or h[v] >= n:              # Phase 2: nur Knoten auf der Seite von S; die Knoten, die T erreichen, bleiben unberührt (sie bekommen nie Überschuss)
-                    h[v] = max(h[v], base + dist[v])
-            elif phase[0] == 1:
-                h[v] = max(h[v], n)
+            if phase[0] == 1:
+                h[v] = max(h[v], dist[v] if v in dist else n)
+            elif s_side[v]:                                 # Phase 2: alle Knoten auf der Seite von S (sie erreichen T nicht, das bleibt in Phase 2 so); die Knoten, die T erreichen, bleiben unberührt (sie bekommen nie Überschuss)
+                h[v] = max(h[v], base + dist[v] if v in dist else dead_end)
         recount()
         return scanned
 
